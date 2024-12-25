@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Online Compiler</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.32.1/min/vs/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Online Code Compiler</h1>
+        </div>
+        
+        <div class="control-panel">
+            <select id="language">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+                <option value="c">C</option>
+            </select>
+            <button class="run-btn" onclick="compileAndRun()">
+                <span>Run Code</span>
+                <div id="loading" class="loading" style="display: none;"></div>
+            </button>
+        </div>
+
+        <div class="editor-container" id="editor"></div>
+        <div class="output-container" id="output">Output will appear here...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
